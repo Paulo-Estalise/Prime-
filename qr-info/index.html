@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Pacote</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Informações do Pacote</h1>
+    </header>
+    <main>
+        <div id="info"></div>
+    </main>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const data = JSON.parse(urlParams.get('data'));
+
+        const infoDiv = document.getElementById('info');
+        infoDiv.innerHTML = `
+            <p><strong>Nome do Cliente:</strong> ${data.clientName}</p>
+            <p><strong>ENF:</strong> ${data.enf}</p>
+            <p><strong>Quantidade de Volumes:</strong> ${data.volumeQuantity}</p>
+            <p><strong>Destino:</strong> ${data.destination}</p>
+        `;
+    </script>
+</body>
+</html>

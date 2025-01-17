@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Lista de Pacotes</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+        <h1>Lista de Pacotes</h1>
+        <p>Preencha os dados abaixo:</p>
+    </header>
+
+    <main class="form">
+        <input type="text" id="clientName" placeholder="Nome do Cliente">
+        <input type="text" id="nfNumber" placeholder="Número da NF">
+        <input type="number" id="volumeCount" placeholder="Quantidade de Volumes">
+        <input type="text" id="additionalInfo" placeholder="Destino">
+        <button id="addBtn">Gerar Lista</button>
+    </main>
+
+    <ul id="packageList"></ul>
+
+    <footer>
+        <button id="saveBtn">Salvar Lista</button>
+        <button id="printBtn">Imprimir Lista</button>
+    </footer>
+  </div>
+
+  <script src="js/qr-generator.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/******************** Fontes usadas */
+@import url('https://fonts.cdnfonts.com/css/tt-hoves-pro-trial');
+@import url('https://fonts.cdnfonts.com/css/clash-grotesk');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-grande: 'TT Hoves Pro Trial', sans-serif;
+    --font-pequena: 'Clash Grotesk', sans-serif;
+    --color-black: #000;
+    --color-gray1: #3d4143;
+    --color-gray2: #9c9d9d;
+    --color-white: #f6f6f6;
+    --color-destaque1: #005fa3; /* Azul escuro */
+    --color-destaque2: #00d4ff; /* Azul claro */
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray1);
+    border-radius: 20px;
+    border: 3px solid var(--color-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-gray2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-black);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-pequena);
+    color: var(--color-white);
+    overflow-x: hidden;
+}
+
+/* Container Principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-family: var(--font-grande);
+    color: var(--color-white);
+}
+
+#employeeAccess {
+    background: var(--color-destaque1); /* Azul escuro */
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#employeeAccess:hover {
+    background: var(--color-destaque2); /* Azul claro ao passar o mouse */
+}
+
+/* Conteúdo Principal */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.intro {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    font-family: var(--font-grande);
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: var(--color-gray2);
+    line-height: 1.6;
+}
+
+/* Botão de Cotação */
+#quoteBtn {
+    background: var(--color-destaque1); /* Azul escuro */
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+    width: 200px; /* Largura reduzida */
+    text-align: center;
+    text-decoration: none; /* Remove sublinhado de link */
+}
+
+#quoteBtn:hover {
+    background: var(--color-destaque2); /* Azul claro ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-gray1);
+    color: var(--color-gray2);
+    font-size: 0.9rem;
+}
+
+/* Ícones do WhatsApp e Instagram no rodapé */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer .social-icons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .contact h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact ul li {
+        font-size: 0.9rem;
+    }
+
+    #quoteBtn {
+        width: 100%;
+        padding: 15px;
+    }
+}
